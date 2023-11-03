@@ -371,7 +371,25 @@ library(ggplot2)</code></pre>
 </div>
 <div id="exercise-1" class="section level2">
 <h2>Exercise 1</h2>
-<pre class="r"><code># Do some preliminary investigations &amp; cleaning</code></pre>
+<pre class="r"><code># Do some preliminary investigations &amp; cleaning
+
+diamonds %&gt;% select(&#39;depth_pct&#39;,&#39;length_mm&#39;,&#39;width_mm&#39;,&#39;depth_mm&#39;,)</code></pre>
+<pre><code>## # A tibble: 53,940 × 4
+##    depth_pct length_mm width_mm depth_mm
+##        &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+##  1      61.5      3.95     3.98     2.43
+##  2      59.8      3.89     3.84     2.31
+##  3      56.9      4.05     4.07     2.31
+##  4      62.4      4.2      4.23     2.63
+##  5      63.3      4.34     4.35     2.75
+##  6      62.8      3.94     3.96     2.48
+##  7      62.3      3.95     3.98     2.47
+##  8      61.9      4.07     4.11     2.53
+##  9      65.1      3.87     3.78     2.49
+## 10      59.4      4        4.05     2.39
+## # ℹ 53,930 more rows</code></pre>
+<pre class="r"><code>ggplot()</code></pre>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABUAAAAPACAMAAADDuCPrAAAABlBMVEXr6+v///+HIERrAAAACXBIWXMAAB2HAAAdhwGP5fFlAAAMUklEQVR4nO3UsQnAMBDAwM/+S7s3OBg1IXA3gSrNA0AyXwcA/JWBAkQGChAZKEBkoACRgQJEBgoQGShAZKAAkYECRAYKEBkoQGSgANE20AHgxEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIDJQgMhAASIDBYjeBwrALQMFiAwUIDJQgMhAASIDBYgMFCAyUIDIQAEiAwWIDBQgMlCAyEABIgMFiAwUIFoPiQHHEsDzcAAAAABJRU5ErkJggg==" width="672" /></p>
 </div>
 <div id="exercise-2" class="section level2">
 <h2>Exercise 2</h2>
@@ -381,12 +399,28 @@ library(ggplot2)</code></pre>
 # Overall table_mm arithmetic mean?
 
 
+diamonds %&gt;% summarise(mean(table_mm))</code></pre>
+<pre><code>## # A tibble: 1 × 1
+##   `mean(table_mm)`
+##              &lt;dbl&gt;
+## 1             3.30</code></pre>
+<pre class="r"><code># table_mm arithmetic mean within each clarity category
 
 
-
-
-# table_mm arithmetic mean within each clarity category</code></pre>
-<p><em>Add your comment here</em></p>
+diamonds %&gt;% group_by(clarity) %&gt;% summarise(mean(table_mm))</code></pre>
+<pre><code>## # A tibble: 8 × 2
+##   clarity `mean(table_mm)`
+##   &lt;ord&gt;              &lt;dbl&gt;
+## 1 I1                  3.91
+## 2 SI2                 3.71
+## 3 SI1                 3.40
+## 4 VS2                 3.25
+## 5 VS1                 3.20
+## 6 VVS2                2.98
+## 7 VVS1                2.83
+## 8 IF                  2.82</code></pre>
+<p><em>the greater the length of the diamond the worse the clarity of
+the diamond</em></p>
 </div>
 <div id="exercise-3" class="section level2">
 <h2>Exercise 3</h2>
@@ -395,7 +429,11 @@ code</em></p>
 </div>
 <div id="exercise-4" class="section level2">
 <h2>Exercise 4</h2>
-<pre class="r"><code># Write gmean() command</code></pre>
+<pre class="r"><code># Write gmean() command
+
+gmean &lt;- function(x) {
+  exp(mean(log(x)))
+}</code></pre>
 </div>
 <div id="exercise-5" class="section level2">
 <h2>Exercise 5</h2>
@@ -403,13 +441,14 @@ code</em></p>
   test1 = c(2.1, 3.8, 4.2),
   test2 = c(1, 10, 100, 1000),
   test3 = c(0, 1, 4),
-  test4 = c(0.38,  0.94, -1.56),
-  test5 = c(TRUE, TRUE),
-  test6 = c(&quot;6&quot;, &quot;7&quot;, &quot;8&quot;)
-)
+)</code></pre>
+<pre><code>## Error in list(test1 = c(2.1, 3.8, 4.2), test2 = c(1, 10, 100, 1000), test3 = c(0, : argument 4 is empty</code></pre>
+<pre class="r"><code># Create for loop to test gmean() on the above examples
 
-
-# Create for loop to test gmean() on the above examples</code></pre>
+for (x in test_data[x]) {
+  gmean(x)
+}</code></pre>
+<pre><code>## Error in eval(expr, envir, enclos): object &#39;test_data&#39; not found</code></pre>
 </div>
 <div id="exercise-6" class="section level2">
 <h2>Exercise 6</h2>

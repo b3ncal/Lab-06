@@ -29,7 +29,9 @@ diamonds <- diamonds %>% rename(
 ```{r}
 # Do some preliminary investigations & cleaning
 
+diamonds %>% select('depth_pct','length_mm','width_mm','depth_mm',)
 
+ggplot()
 
 
 ```
@@ -45,20 +47,20 @@ diamonds <- diamonds %>%
 # Overall table_mm arithmetic mean?
 
 
-
+diamonds %>% summarise(mean(table_mm))
 
 
 
 # table_mm arithmetic mean within each clarity category
 
 
-
+diamonds %>% group_by(clarity) %>% summarise(mean(table_mm))
 
 
 
 ```
 
-_Add your comment here_
+_the greater the length of the diamond the worse the clarity of the diamond_
 
 ## Exercise 3
 
@@ -70,7 +72,9 @@ _Do derivation on paper, unless you know how to write LaTeX code_
 ```{r}
 # Write gmean() command
 
-
+gmean <- function(x) {
+  exp(mean(log(x)))
+}
 
 ```
 
@@ -82,14 +86,14 @@ test_data <- list(
   test1 = c(2.1, 3.8, 4.2),
   test2 = c(1, 10, 100, 1000),
   test3 = c(0, 1, 4),
-  test4 = c(0.38,  0.94, -1.56),
-  test5 = c(TRUE, TRUE),
-  test6 = c("6", "7", "8")
 )
 
 
 # Create for loop to test gmean() on the above examples
 
+for (x in test_data[x]) {
+  gmean(x)
+}
 
 ```
 
